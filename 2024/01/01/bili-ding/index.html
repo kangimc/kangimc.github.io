@@ -24,7 +24,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="钉钉的图标征集结果">
 <meta property="og:url" content="https://blog.imkangnet.top/2024/01/01/bili-ding/index.html">
-<meta property="og:site_name" content="进步无限!">
+<meta property="og:site_name" content="WKK &amp; Blog">
 <meta property="og:description" content="钉钉的图标征集结束了，诞生了那些不一样的结果 让我们一起来看看吧！ 要素过多！花6666元找网友征集的logo就这? 原视频: Bilibili-要素过多！花6666元找网友征集的logo就这? 在线观看:">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-01T10:53:30.000Z">
@@ -37,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>钉钉的图标征集结果 - 进步无限!</title>
+  <title>钉钉的图标征集结果 - WKK &amp; Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -103,7 +103,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>进步无限!</strong>
+      <strong>WKK &amp; Blog</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -403,40 +403,29 @@
   
     <article id="comments" lazyload>
       
-    <div id="giscus" class="giscus"></div>
-    <script type="text/javascript">
-      Fluid.utils.loadComments('#giscus', function() {
-        var options = {"repo":"kangimc/Hexo-giscus","repo-id":"R_kgDOK-ZtRA","category":"Announcements","category-id":"DIC_kwDOK-ZtRM4CcC90","theme-light":"light","theme-dark":"dark","mapping":"title","reactions-enabled":1,"emit-metadata":0,"input-position":"top","lang":"zh-CN","loading":"lazy","crossorigin":"anonymous"};
-        var attributes = {};
-        for (let option in options) {
-          if (!option.startsWith('theme-')) {
-            var key = option.startsWith('data-') ? option : 'data-' + option;
-            attributes[key] = options[option];
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://kangnet-twikoo.netlify.app/.netlify/functions/twikoo","region":null,"path":"window.location.pathname"},
+          {
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
           }
-        }
-        var light = 'light';
-        var dark = 'dark';
-        window.GiscusThemeLight = light;
-        window.GiscusThemeDark = dark;
-        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
-        for (let attribute in attributes) {
-          var value = attributes[attribute];
-          if (value === undefined || value === null || value === '') {
-            delete attributes[attribute];
-          }
-        }
-        var s = document.createElement('script');
-        s.setAttribute('src', 'https://giscus.app/client.js');
-        s.setAttribute('crossorigin', 'anonymous');
-        for (let attribute in attributes) {
-          s.setAttribute(attribute, attributes[attribute]);
-        }
-        var ss = document.getElementsByTagName('script');
-        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
-        e.parentNode.insertBefore(s, e.nextSibling);
+        )
+        twikoo.init(options)
       });
-    </script>
-    <noscript>Please enable JavaScript to view the comments</noscript>
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
 
 
     </article>
